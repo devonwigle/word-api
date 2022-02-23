@@ -36,7 +36,7 @@ app.get("/api/v1/words", (request, response) => {
 });
 
 app.get("/api/v1/words/id/:id", (request, response) => {
-  const words = app.locals.words.find((word) => word.id === request.params.id);
+  const words = app.locals.words.find((word) => `${word.id}` === (request.params.id));
 
   response.json({ words });
 });
