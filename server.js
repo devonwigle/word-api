@@ -1,9 +1,11 @@
 let fs = require("fs");
 let parse = require("csv-parse").parse;
+let cors = require("cors")
 
 const express = require('express');
 const app = express();
 
+app.use(cors())
 app.set('port', process.env.PORT || 3001);
 app.locals.title = 'Words';
 
