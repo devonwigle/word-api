@@ -7,8 +7,6 @@ const app = express();
 app.set('port', process.env.PORT || 3001);
 app.locals.title = 'Words';
 
-app.set('etag', false);
-
 app.get('/', (request, response) => {
   response.send('Oh hey Words');
 });
